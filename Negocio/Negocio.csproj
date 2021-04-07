@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F00B788B-BE8D-42A0-834B-2AFEA27595BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Negocio</RootNamespace>
+    <AssemblyName>Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FuncionesGenerales.cs" />
+    <Compile Include="NR_ControlCambios.cs" />
+    <Compile Include="NR_Cuerpo_Informe.cs" />
+    <Compile Include="NR_Encabezado.cs" />
+    <Compile Include="NR_ListadoOtrosComprobantes.cs" />
+    <Compile Include="NR_OtroComprobante.cs" />
+    <Compile Include="NR_ReporteOtrosComprobantes.cs" />
+    <Compile Include="N_Auxiliares.cs" />
+    <Compile Include="N_Bancos.cs" />
+    <Compile Include="N_Barrios_ciudad.cs" />
+    <Compile Include="N_Centros_Costos.cs" />
+    <Compile Include="N_Ciudades.cs" />
+    <Compile Include="N_Clases_contribuyente.cs" />
+    <Compile Include="N_Conversion.cs" />
+    <Compile Include="N_Codeudores.cs" />
+    <Compile Include="N_Cod_direcciones.cs" />
+    <Compile Include="N_Cod_Inventario.cs" />
+    <Compile Include="N_Comprobantes.cs" />
+    <Compile Include="N_Conceptos.cs" />
+    <Compile Include="N_Conciliacion_bancaria.cs" />
+    <Compile Include="N_Contabilidad_concepto.cs" />
+    <Compile Include="N_Contrato_Admon.cs" />
+    <Compile Include="N_Contrato_Arren.cs" />
+    <Compile Include="N_Control.cs" />
+    <Compile Include="N_Controlcambios.cs" />
+    <Compile Include="N_Cuadre_diario.cs" />
+    <Compile Include="N_Cuentas.cs" />
+    <Compile Include="N_Cuentas_Bancarias.cs" />
+    <Compile Include="N_Cuenta_Aux.cs" />
+    <Compile Include="N_Cuenta_Secciones.cs" />
+    <Compile Include="N_Departamentos.cs" />
+    <Compile Include="N_Descuentos.cs" />
+    <Compile Include="N_Descuentos_Prop.cs" />
+    <Compile Include="N_Destinos_inmueble.cs" />
+    <Compile Include="N_DetalleCamposInforme.cs" />
+    <Compile Include="N_Detalle_conciliacion.cs" />
+    <Compile Include="N_Detalle_EgServicios.cs" />
+    <Compile Include="N_Detalle_informe_contabilidad.cs" />
+    <Compile Include="N_Detalle_IngServicios.cs" />
+    <Compile Include="N_Detalle_Inventario.cs" />
+    <Compile Include="N_Detalle_PagoInq.cs" />
+    <Compile Include="N_Detalle_PagoProp.cs" />
+    <Compile Include="N_Deudores.cs" />
+    <Compile Include="N_Empresas.cs" />
+    <Compile Include="N_Estados_comp.cs" />
+    <Compile Include="N_Estados_contab.cs" />
+    <Compile Include="N_Estados_inmueble.cs" />
+    <Compile Include="N_Estados_tran.cs" />
+    <Compile Include="N_Facturas.cs" />
+    <Compile Include="N_Formas_pago.cs" />
+    <Compile Include="N_Formulas_Aut.cs" />
+    <Compile Include="N_General.cs" />
+    <Compile Include="N_Imagenes_Detalle_Inventario.cs" />
+    <Compile Include="N_Informe.cs" />
+    <Compile Include="N_Informes_contabilidad.cs" />
+    <Compile Include="N_Informes_Contables.cs" />
+    <Compile Include="N_Ing_Egr.cs" />
+    <Compile Include="N_Inmuebles.cs" />
+    <Compile Include="N_Inventarios.cs" />
+    <Compile Include="N_Mayor.cs" />
+    <Compile Include="N_MensajesConsulta.cs" />
+    <Compile Include="N_ModosEG.cs" />
+    <Compile Include="N_Monedas.cs" />
+    <Compile Include="N_Movimiento_Bancario.cs" />
+    <Compile Include="N_Movimiento_Contable.cs" />
+    <Compile Include="N_OtrasDeudas.cs" />
+    <Compile Include="N_Otroscomprobantes.cs" />
+    <Compile Include="N_OtrosPagos.cs" />
+    <Compile Include="N_Pagos_Inq.cs" />
+    <Compile Include="N_Pagos_Propietarios.cs" />
+    <Compile Include="N_Papeleria.cs" />
+    <Compile Include="N_ParamCons.cs" />
+    <Compile Include="N_Param_contab_empresa.cs" />
+    <Compile Include="N_Periodos_contables.cs" />
+    <Compile Include="N_Procesos_facturacion.cs" />
+    <Compile Include="N_Propietarios.cs" />
+    <Compile Include="N_Prop_Inmuebles.cs" />
+    <Compile Include="N_Prorrogas.cs" />
+    <Compile Include="N_Regimenes.cs" />
+    <Compile Include="N_Saldos_Contables.cs" />
+    <Compile Include="N_Saldos_Diarios.cs" />
+    <Compile Include="N_Saldos_Generales.cs" />
+    <Compile Include="N_Saldos_Inquilinos.cs" />
+    <Compile Include="N_Saldos_Servicios.cs" />
+    <Compile Include="N_Saldo_Caja.cs" />
+    <Compile Include="N_Secciones.cs" />
+    <Compile Include="N_Telefonos_auxiliar.cs" />
+    <Compile Include="N_Tipos_Aux.cs" />
+    <Compile Include="N_Tipos_Comp.cs" />
+    <Compile Include="N_Tipos_Cuenta.cs" />
+    <Compile Include="N_Tipos_Id.cs" />
+    <Compile Include="N_Tipos_Inmueble.cs" />
+    <Compile Include="N_Tipos_telefono.cs" />
+    <Compile Include="N_Tipos_tercero.cs" />
+    <Compile Include="N_Tipos_Usuario.cs" />
+    <Compile Include="N_Tipo_saldo_PUC.cs" />
+    <Compile Include="N_Transacciones_bancarias.cs" />
+    <Compile Include="N_Usuarios.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{02c83f6a-b6fe-4c87-9933-a667cd25aead}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{1abba320-8589-4722-b4b3-5e5a8793c4a6}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
