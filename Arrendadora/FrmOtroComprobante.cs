@@ -196,6 +196,7 @@ namespace Arrendadora
                     }
                     else
                     {
+                        TSBtnAdicionar.Enabled = false;
                         OtroComprobante.C_Otroscomprobantes.Seccion = 1;
                         OtroComprobante.C_Otroscomprobantes.Estado = "A";
                         OtroComprobante.C_Otroscomprobantes.Centro_costo = 1;
