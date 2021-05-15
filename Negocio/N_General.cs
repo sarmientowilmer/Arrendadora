@@ -12,6 +12,15 @@ namespace Logica
         public ClsDatos Data = new ClsDatos();
         public string GsPath;
         public string ConectaA;
+        public string Servidor;
+        public string PathDatosAccess;
+
+        public N_General()
+        {
+            this.Servidor = Data.Servidor;
+            this.PathDatosAccess = Data.PathDatosAccess;
+        }
+        
         public void ConectarA (string ConectaA)
         {
             //Data.ConectaA = ConectaA;
