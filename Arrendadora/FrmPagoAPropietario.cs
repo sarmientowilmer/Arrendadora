@@ -22,7 +22,7 @@ namespace Arrendadora
         //N_Pagos_Propietarios PagosPropietario = new N_Pagos_Propietarios();
         //N_Detalle_PagoProp DetallePagoProp = new N_Detalle_PagoProp();
         DataTable DTLiquidacion = new DataTable();
-        int Sw;
+        //int Sw;
         FrmPrincipal FormPrincipal = new FrmPrincipal();
 
         public FrmPagoAPropietario()

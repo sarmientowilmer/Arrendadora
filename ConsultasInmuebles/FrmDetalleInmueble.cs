@@ -32,7 +32,7 @@ namespace ConsultasInmuebles
         {
             InitializeComponent();
             Inmuebles = Inm;
-            //Imagenes.DatosServidoryPath(Application.StartupPath);
+            Imagenes.DatosServidoryPath(Application.StartupPath);
             DTImagenes = Imagenes.ImagenesInmueble(Inmuebles.C_Inmuebles.Cod_inmueble);
             DTInmueble = Inmuebles.DetalleInmueble(Inmuebles.C_Inmuebles.Cod_inmueble);
             MostrarDatos();
@@ -41,12 +41,9 @@ namespace ConsultasInmuebles
 
         private void CargarImagen(ref PictureBox PB, int Posicion)
         {
-            string direccion = @"\\" + Imagenes.Servidor + @"\" + Imagenes.PathDatosAccess;
-            //if (Funciones.ExisteArchivo(Imagenes.GsPath + DTImagenes.Rows[Posicion]["nombre_imagen"]))
-            if (Funciones.ExisteArchivo(direccion + DTImagenes.Rows[Posicion]["nombre_imagen"]))
+            if (Funciones.ExisteArchivo(Imagenes.GsPath + DTImagenes.Rows[Posicion]["nombre_imagen"]))
             {
-                //PB.Image = Image.FromFile(Imagenes.GsPath + DTImagenes.Rows[Posicion]["nombre_imagen"]);
-                PB.Image = Image.FromFile(direccion + DTImagenes.Rows[Posicion]["nombre_imagen"]);
+                PB.Image = Image.FromFile(Imagenes.GsPath + DTImagenes.Rows[Posicion]["nombre_imagen"]);
             }
             else
             {
