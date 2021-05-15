@@ -20,13 +20,15 @@ namespace AccesoDatos
         string gsServidor;
         public string CadenaConexion { get; set; }
         public string ConectaA { get; set; }
+        public string Servidor {get; set;}
+        public string PathDatosAccess { get; set; }
 
         public ClsDatos()
         {
-            string Servidor = ConfigurationManager.AppSettings["Servidor"]; 
+            Servidor = ConfigurationManager.AppSettings["Servidor"]; 
             string BD = ConfigurationManager.AppSettings["BD"];
             string BDAccess = ConfigurationManager.AppSettings["BDAccess"];
-            string PathDatosAccess = ConfigurationManager.AppSettings["PathDatosAccess"];
+            PathDatosAccess = ConfigurationManager.AppSettings["PathDatosAccess"];
             ConectaA = ConfigurationManager.AppSettings["ConectarA"];
             switch (ConectaA)
             {
