@@ -701,10 +701,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>2.88205in</Height>
+        <Height>3.12163in</Height>
         <Style />
       </Body>
-      <Width>7.75359in</Width>
+      <Width>7.70151in</Width>
       <Page>
         <PageHeader>
           <Height>2.65444cm</Height>
@@ -1023,12 +1023,14 @@
             </Border>
           </Style>
         </PageHeader>
-        <PageHeight>27.94cm</PageHeight>
+        <PageHeight>13.97cm</PageHeight>
         <PageWidth>21.59cm</PageWidth>
-        <LeftMargin>0.5cm</LeftMargin>
-        <RightMargin>0.5cm</RightMargin>
-        <TopMargin>1cm</TopMargin>
-        <BottomMargin>1cm</BottomMargin>
+        <InteractiveHeight>13.97cm</InteractiveHeight>
+        <InteractiveWidth>21.59cm</InteractiveWidth>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>1cm</RightMargin>
+        <TopMargin>0.5cm</TopMargin>
+        <BottomMargin>0.5cm</BottomMargin>
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>

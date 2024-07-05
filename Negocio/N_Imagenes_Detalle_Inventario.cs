@@ -7,7 +7,7 @@ using System.Data;
 using AccesoDatos;
 using Modelo;
 
-namespace Logica
+namespace Negocio
 {
     public class N_Imagenes_Detalle_Inventario : N_General
     {

@@ -419,6 +419,7 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "ARRENDAMIENTOS PARADA ALARCÓN";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 

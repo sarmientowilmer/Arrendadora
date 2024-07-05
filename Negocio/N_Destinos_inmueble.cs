@@ -7,7 +7,7 @@ using System.Data;
 using AccesoDatos;
 using Modelo;
 
-namespace Logica
+namespace Negocio
 {
     public class N_Destinos_inmueble:N_General
     {

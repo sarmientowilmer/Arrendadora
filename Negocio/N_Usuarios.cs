@@ -7,7 +7,7 @@ using System.Data;
 using AccesoDatos;
 using Modelo;
 
-namespace Logica
+namespace Negocio
 {
     public class N_Usuarios : N_General
     {
@@ -62,7 +62,10 @@ namespace Logica
             return resultado;
         }
 
-        public int EsAdmin(int Id, string Pass)
+        public int 
+            
+            
+            EsAdmin(int Id, string Pass)
         {
             int resultado = 0;
             if (Existe(Id, true))

@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Logica
+namespace Negocio
 {
     public class N_Conversion
     {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
+using Negocio;
 
 using System.Globalization;
 
@@ -65,7 +65,8 @@ namespace Arrendadora
                 {
                     if (OtroComprobante.C_Otroscomprobantes.Fecha != DateTime.Today)
                     {
-                        TSBtnAnular.Enabled = false;
+                        if (Program.IdUsuario == 88159430) TSBtnAnular.Enabled = true;
+                        else TSBtnAnular.Enabled = false;
                     }
                     else
                     {

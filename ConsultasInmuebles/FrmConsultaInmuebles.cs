@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
+using Negocio;
 
 namespace ConsultasInmuebles
 {
@@ -283,6 +283,11 @@ namespace ConsultasInmuebles
         private void PanBtnBuscar_Paint(object sender, PaintEventArgs e)
         {
             BuscarInmuebles();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AccesoDatos;
 
-namespace Logica
+namespace Negocio
 {
     public class N_General
     {

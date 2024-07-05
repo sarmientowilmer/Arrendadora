@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
+using Negocio;
+using System.Configuration;
 
 namespace Arrendadora
 {
@@ -41,6 +42,24 @@ namespace Arrendadora
             this.RPVReporte.LocalReport.DataSources.Add(datos);
             this.RPVReporte.SetDisplayMode(DisplayMode.PrintLayout);
 
+            //var settingreporte = new System.Drawing.Printing.PageSettings();
+
+            //settingreporte = System.Drawing.Printing.PageSettings(RPVReporte.PrinterSettings);
+            //settingreporte.PaperSize.RawKind = 6;
+            //settingreporte.PaperSize.Height = 550;
+            //settingreporte.PaperSize.PaperName = "Estamento";
+            //settingreporte.Landscape = true;
+
+            //RPVReporte.SetPageSettings();
+            var pagesett = RPVReporte.GetPageSettings();
+            pagesett.Landscape = true;
+            pagesett.PaperSize.RawKind = 6;
+            pagesett.PaperSize.Width = 550;
+            pagesett.PaperSize.Height = 850;
+            pagesett.PaperSize.PaperName = "Estamento";
+            Console.WriteLine("tamaño de papel page:"+pagesett.PaperSize.ToString());
+            RPVReporte.SetPageSettings(pagesett);
+ 
             this.RPVReporte.RefreshReport();
         }
 

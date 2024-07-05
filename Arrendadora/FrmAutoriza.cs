@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
+using Negocio;
 
 namespace Arrendadora
 {
@@ -45,6 +45,8 @@ namespace Arrendadora
                         MessageBox.Show("El usuario no puede autorizar modificaciones", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case 1:
+
+
                         ControlCambios.C_Controlcambios.Fecha = DateTime.Today;
                         ControlCambios.C_Controlcambios.Hora = DateTime.Now;
                         ControlCambios.C_Controlcambios.Tabla = "OtrosComprobantes";

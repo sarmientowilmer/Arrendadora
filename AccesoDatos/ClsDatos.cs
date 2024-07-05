@@ -37,10 +37,12 @@ namespace AccesoDatos
                     CadenaConexion = "Provider = Microsoft.Jet.OLEDB.4.0; Data source = " + @"\\" + Servidor + @"\" + PathDatosAccess + @"\" + BDAccess + "; Persist Security Info = False; JET OLEDB:DATABASE PASSWORD = 100475wfsj";
                     break;
                 case "MariaDB":
-                    CadenaConexion = "Driver={MariaDB ODBC 3.1 Driver};tcpip=1;server=" + Servidor + ";uid=apa_user;database=" + BD + ";port=3306;charset=utf8;pwd=7ex84OzO4A8I;";
+                    //CadenaConexion = "Driver={MariaDB ODBC 3.1 Driver};tcpip=1;server=" + Servidor + ";uid=apa_user;database=" + BD + ";port=3306;charset=utf8;pwd=7ex84OzO4A8I;";
+                    CadenaConexion = "Driver={MariaDB ODBC 3.1 Driver};tcpip=1;server=" + Servidor + ";uid=arrend_apa;database=" + BD + ";port=3306;charset=utf8;pwd=W]qUdQ-ho3(H;";
                     break;
                 case "MySQL": 
-                    CadenaConexion = "datasource=" + Servidor + ";port=3306;username=apa_user;password=7ex84OzO4A8I;database=" + BD + ";charset=utf8";
+                    //CadenaConexion = "datasource=" + Servidor + ";port=3306;username=apa_user;password=7ex84OzO4A8I;database=" + BD + ";charset=utf8";
+                    CadenaConexion = "datasource=" + Servidor + ";port=3306;username=arrend_apa;password=W]qUdQ-ho3(H;database=" + BD + ";charset=utf8";
                     break;
                 default:
                     CadenaConexion = "Provider = Microsoft.Jet.OLEDB.4.0; Data source = " + @"\\" + Servidor + @"\" + PathDatosAccess + @"\" + BDAccess + "; Persist Security Info = False; JET OLEDB:DATABASE PASSWORD = 100475wfsj";

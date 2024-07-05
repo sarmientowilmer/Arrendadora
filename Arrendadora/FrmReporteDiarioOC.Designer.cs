@@ -50,7 +50,7 @@
             // 
             // NR_ListadoOtrosComprobantesBindingSource
             // 
-            this.NR_ListadoOtrosComprobantesBindingSource.DataSource = typeof(Logica.NR_ListadoOtrosComprobantes);
+            this.NR_ListadoOtrosComprobantesBindingSource.DataSource = typeof(Negocio.NR_ListadoOtrosComprobantes);
             // 
             // FrmReporteDiarioOC
             // 

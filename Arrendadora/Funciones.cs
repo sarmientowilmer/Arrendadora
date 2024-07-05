@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Data;
 using System.ComponentModel;
-using Logica;
+using Negocio;
 
 namespace Arrendadora
 {

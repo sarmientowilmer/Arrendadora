@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
+using Negocio;
 
 
 namespace Arrendadora
@@ -127,7 +127,7 @@ namespace Arrendadora
 
         private void DGVDatos_DoubleClick(object sender, EventArgs e)
         {
-            if (DGVDatos.Rows.Count > 0 && DTPDesde.Value.ToString("yyyy-MM-dd")==DateTime.Today.ToString("yyyy-MM-dd"))
+            if (DGVDatos.Rows.Count > 0 && (Program.IdUsuario == 88159430 || DTPDesde.Value.ToString("yyyy-MM-dd")==DateTime.Today.ToString("yyyy-MM-dd")))
             {
                 FrmOtroComprobante Formulario = new FrmOtroComprobante(FormPrincipal, DGVDatos.CurrentRow.Cells["tipo_comp"].Value.ToString(), Convert.ToInt32(DGVDatos.CurrentRow.Cells["no_comp"].Value),this);
                 Formulario.ShowDialog();

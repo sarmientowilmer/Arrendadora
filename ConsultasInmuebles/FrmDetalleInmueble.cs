@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
+using Negocio;
 
 namespace ConsultasInmuebles
 {
@@ -23,6 +23,7 @@ namespace ConsultasInmuebles
 
         
         DataTable DTImagenes = new DataTable();
+
         public FrmDetalleInmueble()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace ConsultasInmuebles
         {
             InitializeComponent();
             Inmuebles = Inm;
-            Imagenes.DatosServidoryPath(Application.StartupPath);
+            //Imagenes.DatosServidoryPath(Application.StartupPath);
             DTImagenes = Imagenes.ImagenesInmueble(Inmuebles.C_Inmuebles.Cod_inmueble);
             DTInmueble = Inmuebles.DetalleInmueble(Inmuebles.C_Inmuebles.Cod_inmueble);
             MostrarDatos();
@@ -41,14 +42,56 @@ namespace ConsultasInmuebles
 
         private void CargarImagen(ref PictureBox PB, int Posicion)
         {
-            if (Funciones.ExisteArchivo(Imagenes.GsPath + DTImagenes.Rows[Posicion]["nombre_imagen"]))
-            {
-                PB.Image = Image.FromFile(Imagenes.GsPath + DTImagenes.Rows[Posicion]["nombre_imagen"]);
+            string direccion = @"\\" + Imagenes.Servidor + @"\" + Imagenes.PathDatosAccess + @"\";
+            //Image img = null;
+            PB.Image = null;
+            if (DTImagenes.Rows.Count >0 )
+            { 
+                //Console.Write("Archivo" + direccion + DTImagenes.Rows[0]["cod_inmueble"]);
+                Console.WriteLine("Archivo: " + direccion + DTImagenes.Rows[Posicion]["nombre_imagen"]);
+                //MessageBox.Show("Archivo" + direccion + DTImagenes.Rows[Posicion]["nombre_imagen"]);
+                if (Funciones.ExisteArchivo(direccion + DTImagenes.Rows[Posicion]["nombre_imagen"]))
+                {
+                    try
+                    {
+                        using (var bmpTemp = new Bitmap(direccion + DTImagenes.Rows[Posicion]["nombre_imagen"]))
+                        {
+                            //img = new Bitmap(bmpTemp);
+                            //PB.Image = img;
+                            PB.Image = new Bitmap(bmpTemp);
+                        }
+
+                        //PB.Image = Image.FromFile(direccion + DTImagenes.Rows[Posicion]["nombre_imagen"]);
+                        //PB.Image = img;
+                    }
+                    catch (Exception e)
+                    {
+                        //MessageBox.Show("Error al cargar la imagen : " + direccion + DTImagenes.Rows[Posicion]["nombre_imagen"] + "\n Mensaje de error: " + e.Message);
+                        Console.WriteLine("Error al cargar la imagen : " + direccion + DTImagenes.Rows[Posicion]["nombre_imagen"] + "\n Mensaje de error: " + e.Message);
+                        //img.Dispose();
+                        //img = null;
+                        GC.Collect();
+                        GC.WaitForPendingFinalizers();
+                        PB.Image = null;
+                        using (var bmpTemp = new Bitmap(direccion + DTImagenes.Rows[Posicion]["nombre_imagen"]))
+                        {
+                            //img = new Bitmap(bmpTemp);
+                            //PB.Image = img;
+                            PB.Image = new Bitmap(bmpTemp);
+                        }
+                    }
+                }
+                else
+                {
+                    PB.Image = Properties.Resources.camara_de_fotos254;
+                }
             }
             else
             {
                 PB.Image = Properties.Resources.camara_de_fotos254;
             }
+            //img.Dispose();
+            //img = null;
         }
 
         private void MostrarImagen(string Direccion)

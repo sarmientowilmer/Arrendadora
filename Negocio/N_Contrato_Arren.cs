@@ -8,7 +8,7 @@ using AccesoDatos;
 using Modelo;
 using System.Diagnostics;
 
-namespace Logica
+namespace Negocio
 {
     public class N_Contrato_Arren : N_General
     {
