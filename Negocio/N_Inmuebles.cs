@@ -131,6 +131,18 @@ namespace Negocio
             SQL += " GROUP BY Inmuebles.estado;";
             return Data.ConsultaT(SQL);
         }
+
+        public DataTable ListaInmueblesDireccion()
+        {
+            string SQL;
+            SQL = "SELECT Inmuebles.cod_inmueble, inmuebles.direccion" +
+                " FROM Inmuebles ";
+            //if (string.IsNullOrWhiteSpace(DV)) SQL += " WHERE Prop_Inmuebles.tipo_id = '" + Tipo_id + "' AND Prop_Inmuebles.id_propietario = " + Id;
+            //else SQL += " WHERE Prop_Inmuebles.tipo_id = '" + Tipo_id + "' AND Prop_Inmuebles.id_propietario = " + Id + " AND DV='" + DV + "'";
+            //SQL += " GROUP BY Inmuebles.estado;";
+            return Data.ConsultaT(SQL);
+        }
+
         public DataTable ConsultaXPropietarioConContratoMostrar(string Tipo_id, int Id, string DV)
         {
             string SQL;

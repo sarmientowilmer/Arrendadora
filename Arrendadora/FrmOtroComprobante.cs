@@ -543,6 +543,7 @@ namespace Arrendadora
             PrepararComprobante(CboTipoComp.SelectedValue.ToString(), Convert.ToInt32(TxtNumComp.Text));
             FrmRptOtroComprobante Form = new FrmRptOtroComprobante(Reporte);
             Form.ShowDialog();
+            
         }
 
         private void PrepararComprobante(string TipoComp, int NumComp)

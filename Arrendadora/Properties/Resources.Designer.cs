@@ -63,6 +63,16 @@ namespace Arrendadora.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap archivo_no_existe {
+            get {
+                object obj = ResourceManager.GetObject("archivo_no_existe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bancos {
             get {
                 object obj = ResourceManager.GetObject("bancos", resourceCulture);
@@ -76,6 +86,16 @@ namespace Arrendadora.Properties {
         internal static System.Drawing.Bitmap casa32 {
             get {
                 object obj = ResourceManager.GetObject("casa32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NUEVO_LOGO {
+            get {
+                object obj = ResourceManager.GetObject("NUEVO_LOGO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

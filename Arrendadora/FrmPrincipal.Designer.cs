@@ -69,6 +69,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.TSSUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.TCPrincipal = new MdiTabControl.TabControl();
+            this.generarFotosRedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuPrincipal.SuspendLayout();
             this.SSBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -142,7 +143,7 @@
             // 
             this.inmueblesToolStripMenuItem1.Image = global::Arrendadora.Properties.Resources.casa32;
             this.inmueblesToolStripMenuItem1.Name = "inmueblesToolStripMenuItem1";
-            this.inmueblesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.inmueblesToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
             this.inmueblesToolStripMenuItem1.Text = "Inmuebles";
             this.inmueblesToolStripMenuItem1.Click += new System.EventHandler(this.InmueblesToolStripMenuItem1_Click);
             // 
@@ -165,7 +166,7 @@
             this.liquidarPagoInquilinoToolStripMenuItem,
             this.prorrogasToolStripMenuItem});
             this.arrendamientoToolStripMenuItem.Name = "arrendamientoToolStripMenuItem";
-            this.arrendamientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arrendamientoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.arrendamientoToolStripMenuItem.Text = "Arrendamiento";
             // 
             // contratosToolStripMenuItem1
@@ -192,7 +193,7 @@
             this.contratosToolStripMenuItem2,
             this.LiquidarPagoAPropietarioToolStripMenuItem});
             this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
-            this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.administraciónToolStripMenuItem.Text = "Administración";
             // 
             // contratosToolStripMenuItem2
@@ -211,14 +212,14 @@
             // PruebaLiquidaciónToolStripMenuItem
             // 
             this.PruebaLiquidaciónToolStripMenuItem.Name = "PruebaLiquidaciónToolStripMenuItem";
-            this.PruebaLiquidaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.PruebaLiquidaciónToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.PruebaLiquidaciónToolStripMenuItem.Text = "Prueba Liquidación";
             this.PruebaLiquidaciónToolStripMenuItem.Click += new System.EventHandler(this.PruebaLiquidaciónToolStripMenuItem_Click);
             // 
             // CarteraToolStripMenuItem
             // 
             this.CarteraToolStripMenuItem.Name = "CarteraToolStripMenuItem";
-            this.CarteraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.CarteraToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.CarteraToolStripMenuItem.Text = "Cartera";
             this.CarteraToolStripMenuItem.Click += new System.EventHandler(this.CarteraToolStripMenuItem_Click);
             // 
@@ -238,7 +239,7 @@
             this.ingresosToolStripMenuItem,
             this.egresosToolStripMenuItem});
             this.ingresosPorServiciosToolStripMenuItem.Name = "ingresosPorServiciosToolStripMenuItem";
-            this.ingresosPorServiciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ingresosPorServiciosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.ingresosPorServiciosToolStripMenuItem.Text = "Servicios";
             // 
             // ingresosToolStripMenuItem
@@ -259,7 +260,7 @@
             this.ingresosToolStripMenuItem1,
             this.egresosToolStripMenuItem1});
             this.egresosPorServiciosToolStripMenuItem.Name = "egresosPorServiciosToolStripMenuItem";
-            this.egresosPorServiciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.egresosPorServiciosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.egresosPorServiciosToolStripMenuItem.Text = "Varios";
             // 
             // ingresosToolStripMenuItem1
@@ -294,30 +295,30 @@
             this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TransferirWEBToolStripMenuItem,
             this.PruebaReporteToolStripMenuItem,
-            this.PasarFotosToolStripMenuItem});
+            this.PasarFotosToolStripMenuItem,
+            this.generarFotosRedesToolStripMenuItem});
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
-            this.herramientasToolStripMenuItem.Visible = false;
             // 
             // TransferirWEBToolStripMenuItem
             // 
             this.TransferirWEBToolStripMenuItem.Name = "TransferirWEBToolStripMenuItem";
-            this.TransferirWEBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.TransferirWEBToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.TransferirWEBToolStripMenuItem.Text = "Transferir WEB";
             this.TransferirWEBToolStripMenuItem.Click += new System.EventHandler(this.TransferirWEBToolStripMenuItem_Click);
             // 
             // PruebaReporteToolStripMenuItem
             // 
             this.PruebaReporteToolStripMenuItem.Name = "PruebaReporteToolStripMenuItem";
-            this.PruebaReporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.PruebaReporteToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.PruebaReporteToolStripMenuItem.Text = "Prueba Reporte";
             this.PruebaReporteToolStripMenuItem.Click += new System.EventHandler(this.PruebaReporteToolStripMenuItem_Click);
             // 
             // PasarFotosToolStripMenuItem
             // 
             this.PasarFotosToolStripMenuItem.Name = "PasarFotosToolStripMenuItem";
-            this.PasarFotosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.PasarFotosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.PasarFotosToolStripMenuItem.Text = "PasarFotos";
             this.PasarFotosToolStripMenuItem.Click += new System.EventHandler(this.PasarFotosToolStripMenuItem_Click);
             // 
@@ -332,7 +333,7 @@
             // ControlCambiosToolStripMenuItem1
             // 
             this.ControlCambiosToolStripMenuItem1.Name = "ControlCambiosToolStripMenuItem1";
-            this.ControlCambiosToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
+            this.ControlCambiosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ControlCambiosToolStripMenuItem1.Text = "Control Cambios";
             this.ControlCambiosToolStripMenuItem1.Click += new System.EventHandler(this.ControlCambiosToolStripMenuItem1_Click);
             // 
@@ -393,6 +394,13 @@
             this.TCPrincipal.TabCloseButtonImageDisabled = null;
             this.TCPrincipal.TabCloseButtonImageHot = null;
             this.TCPrincipal.TabIndex = 2;
+            // 
+            // generarFotosRedesToolStripMenuItem
+            // 
+            this.generarFotosRedesToolStripMenuItem.Name = "generarFotosRedesToolStripMenuItem";
+            this.generarFotosRedesToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.generarFotosRedesToolStripMenuItem.Text = "Generar Fotos Redes";
+            this.generarFotosRedesToolStripMenuItem.Click += new System.EventHandler(this.generarFotosRedesToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -459,5 +467,6 @@
         private System.Windows.Forms.ToolStripMenuItem controlCambiosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ControlCambiosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem PasarFotosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generarFotosRedesToolStripMenuItem;
     }
 }

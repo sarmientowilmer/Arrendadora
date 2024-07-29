@@ -60,6 +60,14 @@ namespace Negocio
                 " WHERE Detalle_Inventario.cod_inmueble = " + Cod_inmueble +
                 " GROUP BY Detalle_Inventario.cod_inv, Cod_Inventario.descripcion_cod;");
         }
+
+        public DataTable ListaDetalleXInmueble(int Cod_inmueble)
+        {
+            return Data.ConsultaT("SELECT Detalle_Inventario.cod_inmueble, Detalle_Inventario.cod_inv, Cod_Inventario.descripcion_cod, Detalle_Inventario.numero_cod, Detalle_Inventario.nombre_imagen" +
+                " FROM Cod_Inventario INNER JOIN Detalle_Inventario ON Cod_Inventario.cod_inventario = Detalle_Inventario.cod_inv" +
+                " WHERE Detalle_Inventario.cod_inmueble = " + Cod_inmueble +
+                " ;");
+        }
         public long Insertar(M_Detalle_Inventario Detalle_Inventario)
         {
             return Data.Accion("INSERT INTO Detalle_Inventario (Cod_inmueble,Cod_inv,Numero_cod,Descripcion,Nombre_imagen,Orden_ver) VALUES (" + Detalle_Inventario.Cod_inmueble + "," + Detalle_Inventario.Cod_inv + "," + Detalle_Inventario.Numero_cod + ", '" + Detalle_Inventario.Descripcion + "'" + ", '" + Detalle_Inventario.Nombre_imagen + "'" + "," + Detalle_Inventario.Orden_ver + ");");

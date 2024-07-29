@@ -93,5 +93,11 @@ namespace Arrendadora
         {
 
         }
+
+        private void generarFotosRedesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGenerarFotosRedes F = new FrmGenerarFotosRedes();
+            MostrarFormulario(F);
+        }
     }
 }

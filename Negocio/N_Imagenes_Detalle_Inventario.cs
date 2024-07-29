@@ -62,6 +62,17 @@ namespace Negocio
                 " ORDER BY Detalle_Inventario.orden_ver;");
 
         }
+
+        public DataTable ImagenesInmuebleCodInv(int Cod_inmueble, int cod_inv, int numero_cod)
+        {
+            return Data.ConsultaT("SELECT Imagenes_Detalle_Inventario.cod_inmueble, Imagenes_Detalle_Inventario.cod_inv, Imagenes_Detalle_Inventario.numero_cod,Imagenes_Detalle_Inventario.descripcion, Imagenes_Detalle_Inventario.Nombre_imagen" +
+                " FROM Detalle_Inventario INNER JOIN Imagenes_Detalle_Inventario ON(Detalle_Inventario.numero_cod = Imagenes_Detalle_Inventario.numero_cod) AND(Detalle_Inventario.cod_inv = Imagenes_Detalle_Inventario.cod_inv) AND(Detalle_Inventario.cod_inmueble = Imagenes_Detalle_Inventario.cod_inmueble)" +
+                " WHERE Imagenes_Detalle_Inventario.cod_inmueble = " + Cod_inmueble + 
+                " AND Imagenes_Detalle_Inventario.cod_inv = " +cod_inv +
+                " AND Imagenes_Detalle_Inventario.numero_cod = " + numero_cod +
+                " ORDER BY Detalle_Inventario.orden_ver;");
+
+        }
         public long Insertar(M_Imagenes_Detalle_Inventario Imagenes_Detalle_Inventario)
         {
             return Data.Accion("INSERT INTO Imagenes_Detalle_Inventario (Cod_inmueble,Cod_inv,Numero_cod,Numero_imagen,Descripcion,Nombre_imagen) VALUES (" + Imagenes_Detalle_Inventario.Cod_inmueble + "," + Imagenes_Detalle_Inventario.Cod_inv + "," + Imagenes_Detalle_Inventario.Numero_cod + "," + Imagenes_Detalle_Inventario.Numero_imagen + ", '" + Imagenes_Detalle_Inventario.Descripcion + "'" + ", '" + Imagenes_Detalle_Inventario.Nombre_imagen + "'" + ");");

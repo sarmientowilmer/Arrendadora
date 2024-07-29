@@ -42,29 +42,34 @@ namespace Arrendadora
             this.RPVReporte.LocalReport.DataSources.Add(datos);
             this.RPVReporte.SetDisplayMode(DisplayMode.PrintLayout);
 
-            //var settingreporte = new System.Drawing.Printing.PageSettings();
-
-            //settingreporte = System.Drawing.Printing.PageSettings(RPVReporte.PrinterSettings);
-            //settingreporte.PaperSize.RawKind = 6;
-            //settingreporte.PaperSize.Height = 550;
-            //settingreporte.PaperSize.PaperName = "Estamento";
-            //settingreporte.Landscape = true;
-
-            //RPVReporte.SetPageSettings();
             var pagesett = RPVReporte.GetPageSettings();
-            pagesett.Landscape = true;
-            pagesett.PaperSize.RawKind = 6;
-            pagesett.PaperSize.Width = 550;
-            pagesett.PaperSize.Height = 850;
-            pagesett.PaperSize.PaperName = "Estamento";
-            Console.WriteLine("tamaño de papel page:"+pagesett.PaperSize.ToString());
+
+            pagesett.Landscape = ConfigurationManager.AppSettings["Landscape"].Equals("true") ? true : false;
+            pagesett.PaperSize.RawKind = Convert.ToInt32(ConfigurationManager.AppSettings["RawKind"]); //6
+            pagesett.PaperSize.Width = Convert.ToInt32(ConfigurationManager.AppSettings["Width"]);//550;
+            pagesett.PaperSize.Height = Convert.ToInt32(ConfigurationManager.AppSettings["Height"]);//850;
+            pagesett.PaperSize.PaperName = ConfigurationManager.AppSettings["PaperName"];
+            //Console.WriteLine("tamaño de papel page:" + pagesett.PaperSize.ToString());
             RPVReporte.SetPageSettings(pagesett);
- 
+
+
+            //this.RPVReporte.PrintDialog();
+            
             this.RPVReporte.RefreshReport();
+
         }
 
         private void RPVReporte_Load(object sender, EventArgs e)
         {
+            //var pagesett = RPVReporte.GetPageSettings();
+            //pagesett.Landscape = true;
+            //pagesett.PaperSize.RawKind = 6;
+            //pagesett.PaperSize.Width = 550;
+            //pagesett.PaperSize.Height = 850;
+            //pagesett.PaperSize.PaperName = "Estamento";
+            //Console.WriteLine("tamaño de papel page:" + pagesett.PaperSize.ToString());
+            //RPVReporte.SetPageSettings(pagesett);
+            Console.WriteLine("entro al load del reporte");
 
         }
     }
